@@ -17,7 +17,7 @@ namespace CodeExtractor
         /// <param name="exe">search all *.exe extensions in the directory</param>
         /// <param name="dll">search all *.dll extensions in the directory</param>
         /// <param name="compress">Determines if the folder is compressed</param>
-        /// <param name="deleteAfterCompress">Determines if should delete the compress directory after zip</param>
+        /// <param name="deleteAfterCompress">Determines if the compressed directory should be deleted after zip</param>
         public static void ExpecificFiles(string sourcePath, string destPath, bool cs, bool exe, bool dll, bool compress, bool deleteAfterCompress)
         {
 
@@ -43,7 +43,7 @@ namespace CodeExtractor
         /// </summary>
         /// <param name="path">Patch to make the zip</param>
         /// <param name="fileName">Zip name</param>
-        /// <param name="deleteDirectoryAfterZip">Determines if should delete the compress directory after zip</param>
+        /// <param name="deleteDirectoryAfterZip">Determines if the compressed directory should be deleted after zip</param>
         private static void Compress (string path, string fileName, bool deleteDirectoryAfterZip)
         {
             string rutaDirectorioPadre = new DirectoryInfo(path).Parent.FullName + Path.DirectorySeparatorChar;
